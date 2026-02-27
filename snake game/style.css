@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+.board {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    border: 2px solid black;
+    box-sizing: border-box;   
+}
+
+img{
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    align-content: auto;
+    top: 150px;
+    left: 450px;
+}
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid black;
+    box-sizing: border-box;   
+}
+
+.square:nth-child(odd) {
+    background-color: #844491;
+}
+
+.square:nth-child(even) {
+    background-color: white;
+}

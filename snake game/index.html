@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Snakes and Ladders Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="board">
+</div>
+<div>
+    <img src="snake.png"
+    class=".board">
+</div>
+
+<script>
+    const board = document.querySelector(".board");
+
+    for (let row = 10; row >= 1; row--) {
+
+        let start = (row - 1) * 10 + 1;
+        let end = row * 10;
+        let numbers = [];
+
+        for (let i = start; i <= end; i++) {
+            numbers.push(i);
+        }
+
+        if (row % 2 === 0) {
+            numbers.reverse();
+        }
+
+        numbers.forEach(num => {
+            const square = document.createElement("div");
+            square.classList.add("square");
+            square.innerText = num;
+            board.appendChild(square);
+        });
+    }
+</script>
+
+</body>
+</html>
